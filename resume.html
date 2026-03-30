@@ -1,535 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irem Gokce Aydin — Resume</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irem Gokce Aydin — Resume</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  :root {
-    --ink: #111111;
-    --mid: #555555;
-    --light: #999999;
-    --rule: #e0e0e0;
-    --accent: #71388a;
-    --bg: #faf9f7;
-    --tag-bg: #f0ece6;
-    --col-left: 62%;
-    --col-right: 38%;
-  }
+    :root {
+      --ink: #111111;
+      --mid: #555555;
+      --light: #999999;
+      --rule: #e0e0e0;
+      --accent: #71388a;
+      --bg: #faf9f7;
+      --tag-bg: #f0ece6;
+      --col-left: 62%;
+      --col-right: 38%;
+    }
 
-  html { font-size: 8.5pt; }
+    html {
+      font-size: 8.5pt;
+    }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.4;
-  }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.4;
+    }
 
-  /* ── PAGE SHELL ── */
-  .page {
-    width: 8.5in;
-    height: 11in;
-    overflow: hidden;
-    margin: 0 auto;
-    background: #fff;
-    display: grid;
-    grid-template-rows: auto 1fr;
-  }
+    /* ── PAGE SHELL ── */
+    .page {
+      width: 8.5in;
+      height: 11in;
+      overflow: hidden;
+      margin: 0 auto;
+      background: #fff;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
 
-  /* ── HEADER ── */
-  header {
-    padding: 0.32in 0.45in 0.22in;
-    border-bottom: 2.5px solid #723889;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 1rem;
-  }
+    /* ── HEADER ── */
+    header {
+      padding: 0.32in 0.45in 0.22in;
+      border-bottom: 2.5px solid #723889;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 1rem;
+    }
 
-  .name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 34pt;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    color: var(--ink);
-  }
+    .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 34pt;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--ink);
+    }
 
-  .name em {
-    font-style: normal;
-    color: var(--accent);
-  }
+    .name em {
+      font-style: normal;
+      color: var(--accent);
+    }
 
-  .tagline {
-    margin-top: 0.28rem;
-    font-size: 7.2pt;
-    color: var(--mid);
-    font-weight: 400;
-    max-width: 4.8in;
-    line-height: 1.5;
-    letter-spacing: 0.01em;
-  }
+    .tagline {
+      margin-top: 0.28rem;
+      font-size: 7.2pt;
+      color: var(--mid);
+      font-weight: 400;
+      max-width: 4.8in;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
 
-  .contact {
-    text-align: right;
-    font-size: 7.5pt;
-    color: var(--mid);
-    line-height: 1.75;
-  }
+    .contact {
+      text-align: right;
+      font-size: 7.5pt;
+      color: var(--mid);
+      line-height: 1.75;
+    }
 
-  .contact a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-  /* ── BODY COLUMNS ── */
-  .body {
-    display: grid;
-    grid-template-columns: var(--col-left) var(--col-right);
-    overflow: hidden;
-  }
+    /* ── BODY COLUMNS ── */
+    .body {
+      display: grid;
+      grid-template-columns: var(--col-left) var(--col-right);
+      overflow: hidden;
+    }
 
-  /* ── LEFT COLUMN ── */
-  .left {
-    padding: 0.28in 0.3in 0.28in 0.45in;
-    border-right: 1px solid var(--rule);
-  }
+    /* ── LEFT COLUMN ── */
+    .left {
+      padding: 0.28in 0.3in 0.28in 0.45in;
+      border-right: 1px solid var(--rule);
+    }
 
-  /* ── RIGHT COLUMN ── */
-  .right {
-    padding: 0.28in 0.36in 0.28in 0.28in;
-    background: #faf9f7;
-  }
+    /* ── RIGHT COLUMN ── */
+    .right {
+      padding: 0.28in 0.36in 0.28in 0.28in;
+      background: #faf9f7;
+    }
 
-  /* ── SECTION HEADINGS ── */
-  .section-label {
-    font-size: 6pt;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.14in;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+    /* ── SECTION HEADINGS ── */
+    .section-label {
+      font-size: 6pt;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.14in;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--rule);
-  }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
 
-  /* ── EXPERIENCE ENTRY ── */
-  .job {
-    margin-bottom: 0.18in;
-    padding-bottom: 0.18in;
-  }
+    /* ── EXPERIENCE ENTRY ── */
+    .job {
+      margin-bottom: 0.18in;
+      padding-bottom: 0.18in;
+    }
 
-  .job:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+    .job:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
-  .job-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: baseline;
-    margin-bottom: 0.02in;
-  }
+    .job-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      margin-bottom: 0.02in;
+    }
 
-  .company {
-    font-family: 'DM Serif Display', serif;
-    font-size: 11pt;
-    letter-spacing: -0.01em;
-  }
+    .company {
+      font-family: 'DM Serif Display', serif;
+      font-size: 11pt;
+      letter-spacing: -0.01em;
+    }
 
-  .period {
-    font-size: 7pt;
-    color: var(--light);
-    font-weight: 400;
-    letter-spacing: 0.02em;
-  }
+    .period {
+      font-size: 7pt;
+      color: var(--light);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
 
-  .role-line {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.07in;
-  }
+    .role-line {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.07in;
+    }
 
-  .role {
-    font-size: 7pt;
-    font-weight: 600;
-    color: var(--mid);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
+    .role {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--mid);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
 
-  .location {
-    font-size: 7pt;
-    color: var(--light);
-  }
+    .location {
+      font-size: 7pt;
+      color: var(--light);
+    }
 
-  .bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.04in;
-  }
+    .bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.04in;
+    }
 
-  .bullets li {
-    font-size: 7.8pt;
-    color: #333;
-    line-height: 1.42;
-    padding-left: 0.85em;
-    position: relative;
-  }
+    .bullets li {
+      font-size: 7.8pt;
+      color: #333;
+      line-height: 1.42;
+      padding-left: 0.85em;
+      position: relative;
+    }
 
-  .bullets li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 7.5pt;
-    top: 0.02em;
-  }
+    .bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 7.5pt;
+      top: 0.02em;
+    }
 
-  /* ── TOOLS ROW ── */
-  .tools-row {
-    margin-top: 0.07in;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.18rem;
-  }
+    /* ── TOOLS ROW ── */
+    .tools-row {
+      margin-top: 0.07in;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.18rem;
+    }
 
-  .tag {
-    font-size: 6.2pt;
-    background: var(--tag-bg);
-    color: var(--mid);
-    padding: 1px 5px;
-    border-radius: 2px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
+    .tag {
+      font-size: 6.2pt;
+      background: var(--tag-bg);
+      color: var(--mid);
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
 
-  /* ── RIGHT COLUMN SECTIONS ── */
-  .skills-group {
-    margin-bottom: 0.15in;
-  }
+    /* ── RIGHT COLUMN SECTIONS ── */
+    .skills-group {
+      margin-bottom: 0.15in;
+    }
 
-  .skills-group-name {
-    font-size: 7.5pt;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 0.04in;
-    letter-spacing: 0.01em;
-  }
+    .skills-group-name {
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.04in;
+      letter-spacing: 0.01em;
+    }
 
-  .skill-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.15rem;
-  }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.15rem;
+    }
 
-  .pill {
-    font-size: 7pt;
-    color: var(--mid);
-    line-height: 1.55;
-  }
+    .pill {
+      font-size: 7pt;
+      color: var(--mid);
+      line-height: 1.55;
+    }
 
-  .pill::after {
-    content: ' ·';
-    color: var(--light);
-  }
-  .pill:last-child::after { content: ''; }
+    .pill::after {
+      content: ' ·';
+      color: var(--light);
+    }
 
-  /* ── EDUCATION ── */
-  .edu-entry {
-    margin-bottom: 0.13in;
-  }
+    .pill:last-child::after {
+      content: '';
+    }
 
-  .edu-school {
-    font-family: 'DM Serif Display', serif;
-    font-size: 9pt;
-    line-height: 1.2;
-  }
+    /* ── EDUCATION ── */
+    .edu-entry {
+      margin-bottom: 0.13in;
+    }
 
-  .edu-degree {
-    font-size: 7.5pt;
-    color: var(--mid);
-    margin-top: 0.015in;
-    line-height: 1.35;
-  }
+    .edu-school {
+      font-family: 'DM Serif Display', serif;
+      font-size: 9pt;
+      line-height: 1.2;
+    }
 
-  .edu-note {
-    font-size: 6.8pt;
-    color: var(--light);
-    margin-top: 0.015in;
-  }
+    .edu-degree {
+      font-size: 7.5pt;
+      color: var(--mid);
+      margin-top: 0.015in;
+      line-height: 1.35;
+    }
 
-  /* ── ACTIVITIES ── */
-  .activity {
-    margin-bottom: 0.13in;
-    padding-bottom: 0.13in;
-    border-bottom: 1px solid var(--rule);
-  }
-  .activity:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+    .edu-note {
+      font-size: 6.8pt;
+      color: var(--light);
+      margin-top: 0.015in;
+    }
 
-  .activity-title {
-    font-size: 8pt;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 0.015in;
-  }
+    /* ── ACTIVITIES ── */
+    .activity {
+      margin-bottom: 0.13in;
+      padding-bottom: 0.13in;
+      border-bottom: 1px solid var(--rule);
+    }
 
-  .activity-role {
-    font-size: 6.8pt;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 0.05in;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+    .activity:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
-  .activity-bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.03in;
-  }
+    .activity-title {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.015in;
+    }
 
-  .activity-bullets li {
-    font-size: 7.2pt;
-    color: #444;
-    padding-left: 0.7em;
-    position: relative;
-    line-height: 1.4;
-  }
+    .activity-role {
+      font-size: 6.8pt;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.05in;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
 
-  .activity-bullets li::before {
-    content: '–';
-    position: absolute;
-    left: 0;
-    color: var(--light);
-  }
+    .activity-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.03in;
+    }
 
-  /* ── DIVIDER ── */
-  .right-divider {
-    margin: 0.15in 0;
-    border: none;
-    border-top: 1px solid var(--rule);
-  }
+    .activity-bullets li {
+      font-size: 7.2pt;
+      color: #444;
+      padding-left: 0.7em;
+      position: relative;
+      line-height: 1.4;
+    }
 
-  /* ── PRINT ── */
-  @media print {
-    body { background: white; }
-    .page { margin: 0; width: 100%; height: 11in; }
-    @page { size: letter; margin: 0; }
-  }
-</style>
+    .activity-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--light);
+    }
+
+    /* ── DIVIDER ── */
+    .right-divider {
+      margin: 0.15in 0;
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        margin: 0;
+        width: 100%;
+        height: 11in;
+      }
+
+      @page {
+        size: letter;
+        margin: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="page">
+  <div class="page">
 
-  <!-- HEADER -->
-  <header>
-    <div>
-      <h1 class="name">Irem Gokce <em>Aydin</em></h1>
-      <p class="tagline">
-        Creative engineer at the intersection of design, frontend architecture, and emerging UX — 
-        building immersive, human-centered products at scale. Former Microsoft &amp; Amazon. 
-        Guided by empathy, curiosity, and a drive to build technology that empowers.
-      </p>
-    </div>
-    <div class="contact">
-      Queens, NY<br>
-      <a href="https://iremgokceaydin.com">iremgokceaydin.com</a><br>
-      <a href="mailto:irem@mailbox.org">irem@mailbox.org</a><br>
-      (206) 636-3923
-    </div>
-  </header>
+    <!-- HEADER -->
+    <header>
+      <div>
+        <h1 class="name">Irem Gokce <em>Aydin</em></h1>
+        <p class="tagline">
+          Creative engineer at the intersection of design, frontend architecture, and emerging UX —
+          building immersive, human-centered products at scale. Former Microsoft &amp; Amazon.
+          Guided by empathy, curiosity, and a drive to build technology that empowers.
+        </p>
+      </div>
+      <div class="contact">
+        Queens, NY<br>
+        <a href="https://iremgokceaydin.com">iremgokceaydin.com</a><br>
+        <a href="mailto:irem@mailbox.org">irem@mailbox.org</a><br>
+        (206) 636-3923
+      </div>
+    </header>
 
-  <!-- BODY -->
-  <div class="body">
+    <!-- BODY -->
+    <div class="body">
 
-    <!-- LEFT: EXPERIENCE -->
-    <div class="left">
-      <div class="section-label">Experience</div>
+      <!-- LEFT: EXPERIENCE -->
+      <div class="left">
+        <div class="section-label">Experience</div>
 
-      <!-- IMDb -->
-      <div class="job">
-        <div class="job-header">
-          <span class="company">IMDb (Amazon)</span>
-          <span class="period">2023 – 2025</span>
+        <!-- IMDb -->
+        <div class="job">
+          <div class="job-header">
+            <span class="company">IMDb (Amazon)</span>
+            <span class="period">2023 – 2025</span>
+          </div>
+          <div class="role-line">
+            <span class="role">Design Technologist</span>
+            <span class="location">Seattle, WA</span>
+          </div>
+          <ul class="bullets">
+            <li>Designed and shipped high-impact immersive advertising experiences across IMDb web and mobile, reaching
+              millions of users globally on behalf of major studios and brands.</li>
+            <li>Led creative direction for Karate Kid: Legends campaign — a gamified interactive experience localized
+              across 10 countries that won a Silver ADDY Award.</li>
+            <li>Built internal tooling that cut campaign creation time by 90%, enabling non-engineers to launch scalable
+              interactive ads independently.</li>
+            <li>Owned end-to-end delivery of an interactive quiz experience for the IMDb Time Machine Theater at Cannes
+              Lions '25 (~2K visitors): concept, UX flows, and live monitoring.</li>
+            <li>Prototyped a physical-computing cinematic experience (Unity + Raspberry Pi/Arduino + IMDb API) for
+              hybrid digital-physical brand activations.</li>
+          </ul>
+          <div class="tools-row">
+            <span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span><span
+              class="tag">Figma</span><span class="tag">AWS</span><span class="tag">GraphQL</span><span
+              class="tag">Unity</span><span class="tag">Raspberry Pi</span><span class="tag">GenAI</span><span
+              class="tag">Adobe CC</span>
+          </div>
         </div>
-        <div class="role-line">
-          <span class="role">Design Technologist</span>
-          <span class="location">Seattle, WA</span>
+
+        <!-- Microsoft -->
+        <div class="job">
+          <div class="job-header">
+            <span class="company">Microsoft</span>
+            <span class="period">2018 – 2023</span>
+          </div>
+          <div class="role-line">
+            <span class="role">Software Engineer — UX</span>
+            <span class="location">Seattle, WA</span>
+          </div>
+          <ul class="bullets">
+            <li>On the Azure IoT UX team, delivered enterprise-scale digital experiences focused on frontend
+              architecture, data visualization, and user engagement for two major manufacturing products.</li>
+            <li>Co-led frontend design and architecture for Azure Digital Twins — digital twin modeling of connected
+              devices, real-time data dashboards, and 3D visualizations via an open-source UI component library.</li>
+            <li>Owned model hierarchy creation, search/filter UX, and SDK development for Azure Time Series Insights, a
+              platform for time series data visualization.</li>
+            <li>Partnered with PM, design, and research to define UX for complex data workflows backed by user studies;
+              mentored interns.</li>
+          </ul>
+          <div class="tools-row">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Redux</span><span
+              class="tag">D3</span><span class="tag">Babylon.js</span><span class="tag">REST APIs</span><span
+              class="tag">Jest</span><span class="tag">Storybook</span><span class="tag">Figma</span><span
+              class="tag">Azure</span><span class="tag">Accessibility</span>
+          </div>
         </div>
-        <ul class="bullets">
-          <li>Designed and shipped high-impact immersive advertising experiences across IMDb web and mobile, reaching millions of users globally on behalf of major studios and brands.</li>
-          <li>Led creative direction for Karate Kid: Legends campaign — a gamified interactive experience localized across 10 countries that won a Silver ADDY Award.</li>
-          <li>Built internal tooling that cut campaign creation time by 90%, enabling non-engineers to launch scalable interactive ads independently.</li>
-          <li>Owned end-to-end delivery of an interactive quiz experience for the IMDb Time Machine Theater at Cannes Lions '25 (~2K visitors): concept, UX flows, and live monitoring.</li>
-          <li>Prototyped a physical-computing cinematic experience (Unity + Raspberry Pi/Arduino + IMDb API) for hybrid digital-physical brand activations.</li>
-        </ul>
-        <div class="tools-row">
-          <span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span><span class="tag">Figma</span><span class="tag">AWS</span><span class="tag">GraphQL</span><span class="tag">Unity</span><span class="tag">Raspberry Pi</span><span class="tag">GenAI</span><span class="tag">Adobe CC</span>
+
+        <!-- MSU -->
+        <div class="job">
+          <div class="job-header">
+            <span class="company">Michigan State University</span>
+            <span class="period">2016 – 2018</span>
+          </div>
+          <div class="role-line">
+            <span class="role">Graduate Researcher — HCI</span>
+            <span class="location">East Lansing, MI</span>
+          </div>
+          <ul class="bullets">
+            <li>Conducted interdisciplinary research in HCI, immersive media, AR/VR, and collective intelligence —
+              including a 360° VR experience for depression, a multiplayer VR exergame, and studies on collective
+              pseudo-knowledge.</li>
+          </ul>
+          <div class="tools-row">
+            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Oculus/HTC
+              Vive/HoloLens</span><span class="tag">JavaScript</span><span class="tag">MySQL</span><span
+              class="tag">SPSS</span><span class="tag">Python</span><span class="tag">UX Research</span>
+          </div>
         </div>
+
+        <!-- Arcelik + ToDem combined -->
+        <div class="job">
+          <div class="job-header">
+            <span class="company">Arcelik &amp; ToDem Informatics</span>
+            <span class="period">2011 – 2014</span>
+          </div>
+          <div class="role-line">
+            <span class="role">R&amp;D / Software Engineer</span>
+            <span class="location">Ankara, Turkey</span>
+          </div>
+          <ul class="bullets">
+            <li>Built interactive apps for Smart TV ecosystems (Beko/Grundig/Arcelik) for millions of consumers;
+              developed a web-based healthcare provisioning platform and a Samsung Smart TV medicine catalog.</li>
+          </ul>
+          <div class="tools-row">
+            <span class="tag">Ruby on Rails</span><span class="tag">JavaScript</span><span class="tag">J2EE</span><span
+              class="tag">PostgreSQL</span><span class="tag">Smart TV SDK</span>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Microsoft -->
-      <div class="job">
-        <div class="job-header">
-          <span class="company">Microsoft</span>
-          <span class="period">2018 – 2023</span>
+      <!-- RIGHT COLUMN -->
+      <div class="right">
+
+        <!-- SKILLS -->
+        <div class="section-label">Skills</div>
+
+        <div class="skills-group">
+          <div class="skills-group-name">Creative &amp; Direction</div>
+          <div class="skill-pills">
+            <span class="pill">Visual Storytelling</span>
+            <span class="pill">Art Direction</span>
+            <span class="pill">Creative Leadership</span>
+            <span class="pill">Multi-Platform Narrative</span>
+            <span class="pill">Roadmap Planning</span>
+            <span class="pill">Marketing Insights</span>
+          </div>
         </div>
-        <div class="role-line">
-          <span class="role">Software Engineer — UX</span>
-          <span class="location">Seattle, WA</span>
+
+        <div class="skills-group">
+          <div class="skills-group-name">Design &amp; UX Engineering</div>
+          <div class="skill-pills">
+            <span class="pill">Human-Centered Design</span>
+            <span class="pill">Interactive UX/UI</span>
+            <span class="pill">Frontend Architecture</span>
+            <span class="pill">Motion &amp; Spatial</span>
+            <span class="pill">3D Visualization</span>
+            <span class="pill">Data-Driven Systems</span>
+            <span class="pill">Game Design</span>
+          </div>
         </div>
-        <ul class="bullets">
-          <li>On the Azure IoT UX team, delivered enterprise-scale digital experiences focused on frontend architecture, data visualization, and user engagement for two major manufacturing products.</li>
-          <li>Co-led frontend design and architecture for Azure Digital Twins — digital twin modeling of connected devices, real-time data dashboards, and 3D visualizations via an open-source UI component library.</li>
-          <li>Owned model hierarchy creation, search/filter UX, and SDK development for Azure Time Series Insights, a platform for time series data visualization.</li>
-          <li>Partnered with PM, design, and research to define UX for complex data workflows backed by user studies; mentored interns.</li>
-        </ul>
-        <div class="tools-row">
-          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Redux</span><span class="tag">D3</span><span class="tag">Babylon.js</span><span class="tag">REST APIs</span><span class="tag">Jest</span><span class="tag">Storybook</span><span class="tag">Figma</span><span class="tag">Azure</span><span class="tag">Accessibility</span>
+
+        <div class="skills-group">
+          <div class="skills-group-name">Emerging &amp; Innovative</div>
+          <div class="skill-pills">
+            <span class="pill">Generative AI</span>
+            <span class="pill">VR / AR / MR</span>
+            <span class="pill">Physical Computing</span>
+            <span class="pill">Immersive Prototyping</span>
+            <span class="pill">Interactive Installations</span>
+            <span class="pill">Vibe Coding</span>
+          </div>
         </div>
+
+        <!-- EDUCATION -->
+        <div class="section-label" style="margin-top: 0.28in;">Education</div>
+
+        <div class="edu-entry">
+          <div class="edu-school">Michigan State University</div>
+          <div class="edu-degree">M.A. Media &amp; Information (HCI specialization)<br></div>
+          <div class="edu-note">Strosacker Foundation Fund · Nancy Seidman Dempsey Scholarship</div>
+          <div class="edu-note">Publications: ACM-CHI, ICA, HCII, Springer</div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-school">Middle East Technical University</div>
+          <div class="edu-degree">M.S. Game Technologies (Design track)<br>B.S. Computer Engineering</div>
+          <div class="edu-note">Publications: ACM-CHI, Springer</div>
+        </div>
+
+        <!-- ACTIVITIES -->
+        <div class="section-label" style="margin-top: 0.28in;">Activities</div>
+
+        <div class="activity">
+          <div class="activity-title">Seattle Turkish Film Festival</div>
+          <div class="activity-role">Short Film Program Director &amp; Creative Artist</div>
+          <ul class="activity-bullets">
+            <li>Curate and program narrative/documentary short film submissions across multi-round evaluation.</li>
+            <li>Lead reviewers, jury recruitment, filmmaker workshops, and live/hybrid screening operations.</li>
+            <li>Direct festival visual identity; manage website (stff.org) and marketing assets.</li>
+          </ul>
+        </div>
+
+        <div class="activity">
+          <div class="activity-title">Other</div>
+          <ul class="activity-bullets">
+            <li>Visual arts @ I-Studio; side projects @ GitHub</li>
+            <li>Reviewer: GHC '20/'21 (HCI track), ICA '16 (Game Studies)</li>
+            <li>Google Travel Grant — SWE '18</li>
+            <li>Philanthropy: Turkish Philanthropy Fund; student mentoring</li>
+          </ul>
+        </div>
+
       </div>
-
-      <!-- MSU -->
-      <div class="job">
-        <div class="job-header">
-          <span class="company">Michigan State University</span>
-          <span class="period">2016 – 2018</span>
-        </div>
-        <div class="role-line">
-          <span class="role">Graduate Researcher — HCI</span>
-          <span class="location">East Lansing, MI</span>
-        </div>
-        <ul class="bullets">
-          <li>Conducted interdisciplinary research in HCI, immersive media, AR/VR, and collective intelligence — including a 360° VR experience for depression, a multiplayer VR exergame, and studies on collective pseudo-knowledge.</li>
-        </ul>
-        <div class="tools-row">
-          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Oculus/HTC Vive/HoloLens</span><span class="tag">JavaScript</span><span class="tag">MySQL</span><span class="tag">UX Research</span>
-        </div>
-      </div>
-
-      <!-- Arcelik + ToDem combined -->
-      <div class="job">
-        <div class="job-header">
-          <span class="company">Arcelik &amp; ToDem Informatics</span>
-          <span class="period">2011 – 2014</span>
-        </div>
-        <div class="role-line">
-          <span class="role">R&amp;D / Software Engineer</span>
-          <span class="location">Ankara, Turkey</span>
-        </div>
-        <ul class="bullets">
-          <li>Built interactive apps for Smart TV ecosystems (Beko/Grundig/Arcelik) for millions of consumers; developed a web-based healthcare provisioning platform and a Samsung Smart TV medicine catalog.</li>
-        </ul>
-        <div class="tools-row">
-          <span class="tag">Ruby on Rails</span><span class="tag">JavaScript</span><span class="tag">J2EE</span><span class="tag">PostgreSQL</span><span class="tag">Smart TV SDK</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="right">
-
-      <!-- SKILLS -->
-      <div class="section-label">Skills</div>
-
-      <div class="skills-group">
-        <div class="skills-group-name">Creative &amp; Direction</div>
-        <div class="skill-pills">
-          <span class="pill">Visual Storytelling</span>
-          <span class="pill">Art Direction</span>
-          <span class="pill">Creative Leadership</span>
-          <span class="pill">Multi-Platform Narrative</span>
-          <span class="pill">Roadmap Planning</span>
-          <span class="pill">Marketing Insights</span>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-name">Design &amp; UX Engineering</div>
-        <div class="skill-pills">
-          <span class="pill">Human-Centered Design</span>
-          <span class="pill">Interactive UX/UI</span>
-          <span class="pill">Frontend Architecture</span>
-          <span class="pill">Motion &amp; Spatial</span>
-          <span class="pill">3D Visualization</span>
-          <span class="pill">Data-Driven Systems</span>
-          <span class="pill">Game Design</span>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <div class="skills-group-name">Emerging &amp; Innovative</div>
-        <div class="skill-pills">
-          <span class="pill">Generative AI</span>
-          <span class="pill">VR / AR / MR</span>
-          <span class="pill">Physical Computing</span>
-          <span class="pill">Immersive Prototyping</span>
-          <span class="pill">Interactive Installations</span>
-          <span class="pill">Vibe Coding</span>
-        </div>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="section-label" style="margin-top: 0.28in;">Education</div>
-
-      <div class="edu-entry">
-        <div class="edu-school">Michigan State University</div>
-        <div class="edu-degree">M.A. Media &amp; Information<br><em>HCI Specialization</em></div>
-        <div class="edu-note">Strosacker Foundation Fund · Nancy Seidman Dempsey Scholarship</div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-school">Middle East Technical University</div>
-        <div class="edu-degree">M.S. Game Technologies (Design)<br>B.S. Computer Engineering</div>
-        <div class="edu-note">Publications: ACM-CHI, Springer</div>
-      </div>
-
-      <!-- ACTIVITIES -->
-      <div class="section-label" style="margin-top: 0.28in;">Activities</div>
-
-      <div class="activity">
-        <div class="activity-title">Seattle Turkish Film Festival</div>
-        <div class="activity-role">Short Film Program Director &amp; Creative Artist</div>
-        <ul class="activity-bullets">
-          <li>Curate and program narrative/documentary short film submissions across multi-round evaluation.</li>
-          <li>Lead reviewers, jury recruitment, filmmaker workshops, and live/hybrid screening operations.</li>
-          <li>Direct festival visual identity; manage website (stff.org) and marketing assets.</li>
-        </ul>
-      </div>
-
-      <div class="activity">
-        <div class="activity-title">Other</div>
-        <ul class="activity-bullets">
-          <li>Visual arts @ I-Studio; side projects @ GitHub</li>
-          <li>Reviewer: GHC '20/'21 (HCI track), ICA '16 (Game Studies)</li>
-          <li>Google Travel Grant — SWE '18</li>
-          <li>Philanthropy: Turkish Philanthropy Fund; student mentoring</li>
-        </ul>
-      </div>
-
-    </div>
-  </div><!-- /body -->
-</div><!-- /page -->
+    </div><!-- /body -->
+  </div><!-- /page -->
 </body>
+
 </html>
