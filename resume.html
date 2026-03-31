@@ -52,11 +52,29 @@
     /* ── HEADER ── */
     header {
       padding: 0.32in 0.45in 0.22in;
-      border-bottom: 2.5px solid #723889;
+      border-bottom: 1.5px solid #f6eff9;
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: end;
       gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(12px) brightness(1.2) saturate(0.8) opacity(0.35);
+      transform: scale(1.1);
+      z-index: 0;
+    }
+
+    header>*:not(.header-video) {
+      position: relative;
+      z-index: 1;
     }
 
     .name {
@@ -368,6 +386,9 @@
 
     <!-- HEADER -->
     <header>
+      <video class="header-video" autoplay muted loop playsinline>
+        <source src="flow.mp4" type="video/mp4">
+      </video>
       <div>
         <h1 class="name">Irem Gokce <em>Aydin</em></h1>
         <p class="tagline">
