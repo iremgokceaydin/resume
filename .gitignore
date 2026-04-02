@@ -1,8 +1,7 @@
 # Ignore everything
 *
 
-# Except resume, index, video, and this file
+# Except index, video, and this file
 !.gitignore
 !index.html
-!resume.html
 !flow.mp4
